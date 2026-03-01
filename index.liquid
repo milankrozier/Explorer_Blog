@@ -1,7 +1,19 @@
 ---
 layout: layout.liquid
-title: 11ty Boilerplate
+title: Interstellar Explorer Blog
 ---
 
-<h1>Yet Another 11ty <strong>Boilerplate</strong></h1>
+<h1>Interstellar Explorer <strong>Blog</strong></h1>
 <img alt="pine" src="/images/pine.png" width="50" />
+<p>Welcome to the recorded logs of adventures around the galaxy from an interstellar explorer in space.</p>
+<h2>Mission Logs</h2>
+
+<ul>
+  {% for post in collections.all %}
+    {% if post.inputPath contains "/posts/" %}
+      <li>
+        <a href="{{ post.url }}">{{ post.data.title }}</a>
+      </li>
+    {% endif %}
+  {% endfor %}
+</ul>

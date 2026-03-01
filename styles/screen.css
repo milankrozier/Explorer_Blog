@@ -1,7 +1,7 @@
 body {
-    font-family: Helvetica, sans-serif;
-    color: #EAE8FF;
-    background: #2D3142;
+    font-family: monospace; sans-serif;
+    color: #E0E6FF;
+    background: #0B0F1A;
     padding: 0 40px;
     text-align: center;
 }
@@ -10,7 +10,8 @@ nav {
     margin: 40px auto 0 auto;
     width: 250px;
     border-radius: 50px;
-    background: #212431;
+    background: #11182A;
+    box-shadow: 0 0 15px rgba(125, 249, 255, 0.2);
 }
 
 nav ul {
@@ -28,9 +29,14 @@ nav ul li {
 nav ul li a {
     display: inline-block;
     padding: 20px;
-    color: #EAE8FF;
+    color: #7DF9FF;
     text-decoration: none;
     font-size: 1.2em;
+    transition: 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #FF7DF9;
 }
 
 h1 {
@@ -38,13 +44,36 @@ h1 {
     letter-spacing: -2px;
 }
 
+article h1 {
+    font-size: 2.5em;
+    margin-top: 0;
+}
+
 h1 strong {
     background: rgb(34,193,195);
-    background: linear-gradient(45deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+    background: linear-gradient(45deg, #7DF9FF 0%, #FF7DF9 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 img.about {
     opacity: 0.5;
+}
+
+article {
+    max-width: 700px;
+    margin: 60px auto;
+    padding: 30px;
+    background: #141C2F;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(125, 249, 255, 0.15);
+    text-align: left;
+}
+
+.status-box {
+    border: 2px solid #7DF9FF;
+    padding: 15px;
+    margin: 20px 0;
+    background-color: #0F1626;
+    border-radius: 10px;
 }
